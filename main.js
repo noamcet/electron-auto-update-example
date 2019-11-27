@@ -35,6 +35,8 @@ app.on('activate', function () {
   }
 });
 
+
+
 ipcMain.on('app_version', (event) => {
   event.sender.send('app_version', { version: app.getVersion() });
 });

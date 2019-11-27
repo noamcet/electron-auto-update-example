@@ -1,14 +1,21 @@
 {
   "name": "electron-auto-update-example",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
     "build": "electron-builder build  --win --publish never",
-    "deploy": "electron-builder build  --win --publish always",
+    "deploy": "electron-builder build  --win --x64 --publish always",
     "ship": "electron-builder build --win -p always"
   },
+  "build": {
+    "appId": "com.electron.itestel",
+    "win": {
+      "certificateSha1": "B61E601F0CA31C9C57B319E2DC10DD3BFEEE74D9"
+    }
+  },
+  
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -21,7 +28,7 @@
   },
   "repository": {
     "type" : "git",
-    "url" : "https://github.com/noamcet/electron-auto-update-example.git",
+    "url" : "https://github.com/noamcet/electron-auto-update-example.git"
   }
 
 }
